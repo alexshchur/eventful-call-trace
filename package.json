@@ -1,12 +1,17 @@
 {
   "name": "eventful-call-trace",
   "version": "1.0.1",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "scripts": {
+    "build": "tsc",
     "test:condensed:bridgeVLRAndStake": "TX_HASH=0x16879ae0f4647f8759f06b3167e7ad387ee0b9f0fbd78050be36fe75fc50b2a6 npx ts-node src/examples/parse-migrations.ts > test-snapshots/bridgeVLRAndStake.condensed_parsed.json",
     "test:condensed:migrateSePSP2toSeVLRAndBridge": "TX_HASH=0x4d6977407db19fa79f1df1ded5009136a7adba3d48be4548a7fba0150570e4d4 npx ts-node src/examples/parse-migrations.ts > test-snapshots/migrateSePSP2toSeVLRAndBridge.condensed_parsed.json",
     "test:condensed:migrateSePSP2toSeVLR": "TX_HASH=0x305696199d02743a2d3149b55e597e79f7fdc12855f028a4aef82831da169cc2 npx ts-node src/examples/parse-migrations.ts > test-snapshots/migrateSePSP2toSeVLR.condensed_parsed.json",
@@ -16,7 +21,8 @@
     "test:condensed:migrateSePSP1toVLR": "TX_HASH=0xa07b4b104414c2d2622370d2bad02ef46072b8da075ed194a2b8d516deace7b5 npx ts-node src/examples/parse-migrations.ts > test-snapshots/migrateSePSP1toVLR.condensed_parsed.json"
   },
   "devDependencies": {
-    "@types/node": "^24.5.2"
+    "@types/node": "^24.5.2",
+    "typescript": "^5.9.2"
   },
   "dependencies": {
     "ethers": "^6.15.0",
