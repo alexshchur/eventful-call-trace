@@ -1,0 +1,82 @@
+{
+  "migratePSPtoSeVLR": {
+    "psp": {
+      "to-ZERO_ADDRESS": {
+        "name": "Transfer",
+        "params": {
+          "token": "0xd3594e879b358f430e20f82bea61e83562d49d48",
+          "from": "0xfc7c1d00b2ec6d3653e9de72590684456846c53d",
+          "to": "0x000000000000000000000000000000000000dead",
+          "value": "681340520574873729020",
+          "toLabel": "ZERO_ADDRESS",
+          "tokenSymbol": "psp"
+        }
+      }
+    },
+    "seVLR": {
+      "from-ZERO_ADDRESS": {
+        "name": "Transfer",
+        "params": {
+          "token": "0x40000320d200c110100638040f10500c8f0010b9",
+          "from": "0x0000000000000000000000000000000000000000",
+          "to": "0xfc7c1d00b2ec6d3653e9de72590684456846c53d",
+          "value": "86793602389817866551",
+          "fromLabel": "ZERO_ADDRESS",
+          "tokenSymbol": "seVLR"
+        }
+      }
+    },
+    "vlr": {
+      "from-miro_migrator|to-seVLR": {
+        "name": "Transfer",
+        "params": {
+          "token": "0x4e107a0000db66f0e9fd2039288bf811dd1f9c74",
+          "from": "0x3f06aa8fff196f9d5033553ca035aa09fae6492c",
+          "to": "0x40000320d200c110100638040f10500c8f0010b9",
+          "value": "681340520574873729020",
+          "fromLabel": "miro_migrator",
+          "toLabel": "seVLR",
+          "tokenSymbol": "vlr"
+        }
+      },
+      "from-seVLR|to-balancer_vault": {
+        "name": "Transfer",
+        "params": {
+          "token": "0x4e107a0000db66f0e9fd2039288bf811dd1f9c74",
+          "from": "0x40000320d200c110100638040f10500c8f0010b9",
+          "to": "0xba12222222228d8ba445958a75a0704d566bf2c8",
+          "value": "681340520574873729020",
+          "fromLabel": "seVLR",
+          "toLabel": "balancer_vault",
+          "tokenSymbol": "vlr"
+        }
+      }
+    },
+    "BPT_vlr": {
+      "from-ZERO_ADDRESS|to-BPT_vlr_fees_collector": {
+        "name": "Transfer",
+        "params": {
+          "token": "0x9620b74077e2a9f118cd37ef60001aeb327ec1a7",
+          "from": "0x0000000000000000000000000000000000000000",
+          "to": "0xce88686553686da562ce7cea497ce749da109f9f",
+          "value": "121379501049648",
+          "fromLabel": "ZERO_ADDRESS",
+          "toLabel": "BPT_vlr_fees_collector",
+          "tokenSymbol": "BPT_vlr"
+        }
+      },
+      "from-ZERO_ADDRESS|to-seVLR": {
+        "name": "Transfer",
+        "params": {
+          "token": "0x9620b74077e2a9f118cd37ef60001aeb327ec1a7",
+          "from": "0x0000000000000000000000000000000000000000",
+          "to": "0x40000320d200c110100638040f10500c8f0010b9",
+          "value": "86793602389817866551",
+          "fromLabel": "ZERO_ADDRESS",
+          "toLabel": "seVLR",
+          "tokenSymbol": "BPT_vlr"
+        }
+      }
+    }
+  }
+}

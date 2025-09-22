@@ -1,0 +1,64 @@
+{
+  "bridgeVLRAndStake": {
+    "StakeBridgingInitiated": [
+      {
+        "name": "StakeBridgingInitiated",
+        "params": {
+          "user": "0x4FBb11B908DFaaEddF30454436314801F8D91a83",
+          "vlrAmount": "100453100000000000000",
+          "wethAmount": "109207950417216",
+          "destChainId": "8453",
+          "message": "0x000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000564461cb0a5092e8d00000000000000000000000000000000000000000000000000005f1eda212cfd000000000000000000000000000000000000000000000000afd90125305e5b960000000000000000000000004fbb11b908dfaaeddf30454436314801f8d91a83"
+        }
+      }
+    ],
+    "vlr": {
+      "to-miro_migrator": {
+        "name": "Transfer",
+        "params": {
+          "token": "0x4e107a0000db66f0e9fd2039288bf811dd1f9c74",
+          "from": "0x4fbb11b908dfaaeddf30454436314801f8d91a83",
+          "to": "0x3f06aa8fff196f9d5033553ca035aa09fae6492c",
+          "value": "100453100000000000000",
+          "toLabel": "miro_migrator",
+          "tokenSymbol": "vlr"
+        }
+      },
+      "from-miro_migrator": {
+        "name": "Transfer",
+        "params": {
+          "token": "0x4e107a0000db66f0e9fd2039288bf811dd1f9c74",
+          "from": "0x3f06aa8fff196f9d5033553ca035aa09fae6492c",
+          "to": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "value": "100453100000000000000",
+          "fromLabel": "miro_migrator",
+          "tokenSymbol": "vlr"
+        }
+      }
+    },
+    "weth": {
+      "to-miro_migrator": {
+        "name": "Transfer",
+        "params": {
+          "token": "0x4200000000000000000000000000000000000006",
+          "from": "0x4fbb11b908dfaaeddf30454436314801f8d91a83",
+          "to": "0x3f06aa8fff196f9d5033553ca035aa09fae6492c",
+          "value": "109207950417216",
+          "toLabel": "miro_migrator",
+          "tokenSymbol": "weth"
+        }
+      },
+      "from-miro_migrator": {
+        "name": "Transfer",
+        "params": {
+          "token": "0x4200000000000000000000000000000000000006",
+          "from": "0x3f06aa8fff196f9d5033553ca035aa09fae6492c",
+          "to": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "value": "109207950417216",
+          "fromLabel": "miro_migrator",
+          "tokenSymbol": "weth"
+        }
+      }
+    }
+  }
+}

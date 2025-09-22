@@ -1,0 +1,25 @@
+{
+  "name": "eventful-call-trace",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "scripts": {
+    "test:condensed:bridgeVLRAndStake": "TX_HASH=0x16879ae0f4647f8759f06b3167e7ad387ee0b9f0fbd78050be36fe75fc50b2a6 npx ts-node src/examples/parse-migrations.ts > test-snapshots/bridgeVLRAndStake.condensed_parsed.json",
+    "test:condensed:migrateSePSP2toSeVLRAndBridge": "TX_HASH=0x4d6977407db19fa79f1df1ded5009136a7adba3d48be4548a7fba0150570e4d4 npx ts-node src/examples/parse-migrations.ts > test-snapshots/migrateSePSP2toSeVLRAndBridge.condensed_parsed.json",
+    "test:condensed:migrateSePSP2toSeVLR": "TX_HASH=0x305696199d02743a2d3149b55e597e79f7fdc12855f028a4aef82831da169cc2 npx ts-node src/examples/parse-migrations.ts > test-snapshots/migrateSePSP2toSeVLR.condensed_parsed.json",
+    "test:condensed:migrateSePSP1toSeVLR": "TX_HASH=0x54992b5f064b02a8fb67e52e0755c6b18e6510420312a250c5aa4e4cd38ac898 npx ts-node src/examples/parse-migrations.ts > test-snapshots/migrateSePSP1toSeVLR.condensed_parsed.json",
+    "test:condensed:migratePSPtoSeVLR": "TX_HASH=0x9eada4a8e6684b4b01ba0a2de619c9f76f73d02e369c23174b7f7c9e618d3171 npx ts-node src/examples/parse-migrations.ts > test-snapshots/migratePSPtoSeVLR.condensed_parsed.json",
+    "test:condensed:migratePSPtoVLR": "TX_HASH=0x00c7376a57698e8c1e4634e967f95288bb626b6e70633b823fe0e750f1e37c72 npx ts-node src/examples/parse-migrations.ts > test-snapshots/migratePSPtoVLR.condensed_parsed.json",
+    "test:condensed:migrateSePSP1toVLR": "TX_HASH=0xa07b4b104414c2d2622370d2bad02ef46072b8da075ed194a2b8d516deace7b5 npx ts-node src/examples/parse-migrations.ts > test-snapshots/migrateSePSP1toVLR.condensed_parsed.json"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2"
+  },
+  "dependencies": {
+    "ethers": "^6.15.0",
+    "ts-essentials": "^10.1.1"
+  }
+}

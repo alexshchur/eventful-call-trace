@@ -1,0 +1,30 @@
+{
+  "migratePSPtoVLR": {
+    "psp": {
+      "to-ZERO_ADDRESS": {
+        "name": "Transfer",
+        "params": {
+          "token": "0xd3594e879b358f430e20f82bea61e83562d49d48",
+          "from": "0x1984581062cd8388210a390e5fefec35c3e4d743",
+          "to": "0x000000000000000000000000000000000000dead",
+          "value": "12491333928391489943796",
+          "toLabel": "ZERO_ADDRESS",
+          "tokenSymbol": "psp"
+        }
+      }
+    },
+    "vlr": {
+      "from-miro_migrator": {
+        "name": "Transfer",
+        "params": {
+          "token": "0x4e107a0000db66f0e9fd2039288bf811dd1f9c74",
+          "from": "0x3f06aa8fff196f9d5033553ca035aa09fae6492c",
+          "to": "0x1984581062cd8388210a390e5fefec35c3e4d743",
+          "value": "12491333928391489943796",
+          "fromLabel": "miro_migrator",
+          "tokenSymbol": "vlr"
+        }
+      }
+    }
+  }
+}

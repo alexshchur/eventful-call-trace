@@ -1,0 +1,155 @@
+{
+  "migrateSePSP2toSeVLRAndBridge": {
+    "StakeBridgingInitiated": [
+      {
+        "name": "StakeBridgingInitiated",
+        "params": {
+          "user": "0xBe5b1aFae3D69E0B193E18ba75Ea27E45aF9D681",
+          "vlrAmount": "2367687667431067467260",
+          "wethAmount": "2638758591419338",
+          "destChainId": "8453",
+          "message": "0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000805372ba848753f83800000000000000000000000000000000000000000000000000095d8605df8d1f00000000000000000000000000000000000000000000001088b99c425ba67f0a000000000000000000000000be5b1afae3d69e0b193e18ba75ea27e45af9d681"
+        }
+      }
+    ],
+    "sePSP2": {
+      "to-miro_migrator": {
+        "name": "Transfer",
+        "params": {
+          "token": "0x26ee65874f5dbefa629eb103e7bbb2deaf4fb2c8",
+          "from": "0xbe5b1afae3d69e0b193e18ba75ea27e45af9d681",
+          "to": "0x3f06aa8fff196f9d5033553ca035aa09fae6492c",
+          "value": "294791214705472425262",
+          "toLabel": "miro_migrator",
+          "tokenSymbol": "sePSP2"
+        }
+      },
+      "from-miro_migrator|to-ZERO_ADDRESS": {
+        "name": "Transfer",
+        "params": {
+          "token": "0x26ee65874f5dbefa629eb103e7bbb2deaf4fb2c8",
+          "from": "0x3f06aa8fff196f9d5033553ca035aa09fae6492c",
+          "to": "0x0000000000000000000000000000000000000000",
+          "value": "294791214705472425262",
+          "fromLabel": "miro_migrator",
+          "toLabel": "ZERO_ADDRESS",
+          "tokenSymbol": "sePSP2"
+        }
+      }
+    },
+    "BPT_psp": {
+      "from-ZERO_ADDRESS|to-BPT_vlr_fees_collector": {
+        "name": "Transfer",
+        "params": {
+          "token": "0x11f0b5cca01b0f0a9fe6265ad6e8ee3419c68440",
+          "from": "0x0000000000000000000000000000000000000000",
+          "to": "0xce88686553686da562ce7cea497ce749da109f9f",
+          "value": "7015517474294655859",
+          "fromLabel": "ZERO_ADDRESS",
+          "toLabel": "BPT_vlr_fees_collector",
+          "tokenSymbol": "BPT_psp"
+        }
+      },
+      "from-sePSP2|to-ZERO_ADDRESS": {
+        "name": "Transfer",
+        "params": {
+          "token": "0x11f0b5cca01b0f0a9fe6265ad6e8ee3419c68440",
+          "from": "0x26ee65874f5dbefa629eb103e7bbb2deaf4fb2c8",
+          "to": "0x0000000000000000000000000000000000000000",
+          "value": "294791214705472425262",
+          "fromLabel": "sePSP2",
+          "toLabel": "ZERO_ADDRESS",
+          "tokenSymbol": "BPT_psp"
+        }
+      }
+    },
+    "weth": {
+      "from-balancer_vault|to-sePSP2": {
+        "name": "Transfer",
+        "params": {
+          "token": "0x4200000000000000000000000000000000000006",
+          "from": "0xba12222222228d8ba445958a75a0704d566bf2c8",
+          "to": "0x26ee65874f5dbefa629eb103e7bbb2deaf4fb2c8",
+          "value": "2638758591419338",
+          "fromLabel": "balancer_vault",
+          "toLabel": "sePSP2",
+          "tokenSymbol": "weth"
+        }
+      },
+      "from-sePSP2|to-miro_migrator": {
+        "name": "Transfer",
+        "params": {
+          "token": "0x4200000000000000000000000000000000000006",
+          "from": "0x26ee65874f5dbefa629eb103e7bbb2deaf4fb2c8",
+          "to": "0x3f06aa8fff196f9d5033553ca035aa09fae6492c",
+          "value": "2638758591419338",
+          "fromLabel": "sePSP2",
+          "toLabel": "miro_migrator",
+          "tokenSymbol": "weth"
+        }
+      },
+      "from-miro_migrator": {
+        "name": "Transfer",
+        "params": {
+          "token": "0x4200000000000000000000000000000000000006",
+          "from": "0x3f06aa8fff196f9d5033553ca035aa09fae6492c",
+          "to": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "value": "2638758591419338",
+          "fromLabel": "miro_migrator",
+          "tokenSymbol": "weth"
+        }
+      }
+    },
+    "psp": {
+      "from-balancer_vault|to-sePSP2": {
+        "name": "Transfer",
+        "params": {
+          "token": "0xd3594e879b358f430e20f82bea61e83562d49d48",
+          "from": "0xba12222222228d8ba445958a75a0704d566bf2c8",
+          "to": "0x26ee65874f5dbefa629eb103e7bbb2deaf4fb2c8",
+          "value": "2367687667431067467260",
+          "fromLabel": "balancer_vault",
+          "toLabel": "sePSP2",
+          "tokenSymbol": "psp"
+        }
+      },
+      "from-sePSP2|to-miro_migrator": {
+        "name": "Transfer",
+        "params": {
+          "token": "0xd3594e879b358f430e20f82bea61e83562d49d48",
+          "from": "0x26ee65874f5dbefa629eb103e7bbb2deaf4fb2c8",
+          "to": "0x3f06aa8fff196f9d5033553ca035aa09fae6492c",
+          "value": "2367687667431067467260",
+          "fromLabel": "sePSP2",
+          "toLabel": "miro_migrator",
+          "tokenSymbol": "psp"
+        }
+      },
+      "from-miro_migrator|to-ZERO_ADDRESS": {
+        "name": "Transfer",
+        "params": {
+          "token": "0xd3594e879b358f430e20f82bea61e83562d49d48",
+          "from": "0x3f06aa8fff196f9d5033553ca035aa09fae6492c",
+          "to": "0x000000000000000000000000000000000000dead",
+          "value": "2367687667431067467260",
+          "fromLabel": "miro_migrator",
+          "toLabel": "ZERO_ADDRESS",
+          "tokenSymbol": "psp"
+        }
+      }
+    },
+    "vlr": {
+      "from-miro_migrator": {
+        "name": "Transfer",
+        "params": {
+          "token": "0x4e107a0000db66f0e9fd2039288bf811dd1f9c74",
+          "from": "0x3f06aa8fff196f9d5033553ca035aa09fae6492c",
+          "to": "0x6f26bf09b1c792e3228e5467807a900a503c0281",
+          "value": "2367687667431067467260",
+          "fromLabel": "miro_migrator",
+          "tokenSymbol": "vlr"
+        }
+      }
+    }
+  }
+}
